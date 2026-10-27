@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0B0E'/%3E%3Ccircle cx='30' cy='34' r='16' fill='%23FFB020'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%2329D9C5'/%3E%3C/svg%3E">
+<title>WhatsApp API vs Bulk SMS: What Actually Works in 2026 | Bharat Infotechs</title>
+<meta name="description" content="An honest comparison of WhatsApp Business API and bulk SMS for Indian businesses — cost, read rates, rich content, and when to use each.">
+<meta name="keywords" content="WhatsApp API vs SMS, bulk SMS India, WhatsApp business API India, WhatsApp marketing vs SMS marketing, business messaging India">
+<link rel="canonical" href="https://www.bharatinfotechs.com/blog-whatsapp-api-vs-sms.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#171226">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Bharat Infotechs">
+<meta property="og:title" content="WhatsApp API vs Bulk SMS: What Actually Works in 2026 | Bharat Infotechs">
+<meta property="og:description" content="An honest comparison of WhatsApp Business API and bulk SMS for Indian businesses — cost, read rates, rich content, and when to use each.">
+<meta property="og:url" content="https://www.bharatinfotechs.com/blog-whatsapp-api-vs-sms.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --text:#F6F5F8; --muted:#B7BAC4;
+    --amber:#FFB020; --teal:#29D9C5; --violet:#8A6CFF;
+    --display:'Space Grotesk', system-ui, sans-serif; --body:'Inter', system-ui, sans-serif;
+    --bg-dark:#0A0B0E; --line:rgba(255,255,255,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg-dark); color:var(--text); font-family:var(--body); -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--display); font-weight:700; margin:0;}
+  ::selection{background:var(--amber); color:#0A0B0E;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+
+  header{position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:26px 34px; background:rgba(10,11,14,.7); backdrop-filter:blur(8px);}
+  .logo{font-family:var(--display); font-weight:700; font-size:19px; color:#fff; text-transform:lowercase;}
+  .logo::after{content:"."; color:var(--amber);}
+  .header-actions{display:flex; align-items:center; gap:12px;}
+  .wa-glyph, .menu-btn{width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.12); border:0; cursor:pointer; transition:background .2s ease, transform .2s ease;}
+  .wa-glyph:hover, .menu-btn:hover{background:#fff; transform:scale(1.06);}
+  .wa-glyph:hover svg, .menu-btn:hover svg{stroke:#0A0B0E;}
+  .wa-glyph svg, .menu-btn svg{width:17px; height:17px; stroke:#fff; transition:stroke .2s ease;}
+
+  .nav-overlay{position:fixed; inset:0; z-index:400; background:rgba(10,9,16,0.97); backdrop-filter:blur(10px); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:6px; padding:0 8%; opacity:0; visibility:hidden; transition:opacity .35s ease, visibility .35s ease;}
+  .nav-overlay.open{opacity:1; visibility:visible;}
+  .nav-overlay a{font-family:var(--display); font-weight:700; font-size:clamp(28px,6vw,54px); text-transform:lowercase; color:#fff; padding:10px 0; opacity:.85; transition:opacity .2s ease, color .2s ease, transform .2s ease;}
+  .nav-overlay a:hover{opacity:1; color:var(--amber); transform:translateX(8px);}
+  .nav-overlay-close{position:absolute; top:26px; right:34px; width:40px; height:40px; border-radius:50%; border:0; background:rgba(255,255,255,0.1); cursor:pointer; display:flex; align-items:center; justify-content:center;}
+  .nav-overlay-close svg{width:18px; height:18px; stroke:#fff;}
+  .nav-overlay-contact{margin-top:34px; display:flex; gap:14px; flex-wrap:wrap;}
+  .nav-overlay-contact a{font-family:var(--body); font-size:13.5px; font-weight:600; text-transform:none; opacity:1; border:1px solid rgba(255,255,255,.3); border-radius:999px; padding:10px 18px; display:inline-flex; align-items:center; gap:8px;}
+  .nav-overlay-contact a:hover{border-color:var(--amber); color:var(--amber);}
+
+  .page-hero{padding:170px 34px 90px; max-width:1180px; margin:0 auto; background:
+    radial-gradient(50% 60% at 80% 10%, rgba(255,176,32,.14), transparent 60%);}
+  .page-hero .eyebrow{font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal); font-weight:600; margin-bottom:16px; display:block;}
+  .page-hero h1{font-size:clamp(34px,5.4vw,60px); text-transform:lowercase; max-width:760px;}
+  .page-hero p{color:var(--muted); font-size:16px; max-width:560px; margin-top:20px; line-height:1.7;}
+
+  main{max-width:1180px; margin:0 auto; padding:0 34px 100px;}
+  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin-bottom:80px;}
+  .why-card{background:#14161d; padding:30px 26px;}
+  .why-card h3{font-size:17px; margin-bottom:8px;}
+  .why-card p{color:var(--muted); font-size:14px; margin:0; line-height:1.6;}
+
+  .roles{border-top:1px solid var(--line);}
+  .role{padding:30px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;}
+  .role h3{font-size:20px; text-transform:lowercase; margin-bottom:6px;}
+  .role .meta{color:var(--muted); font-size:13px; display:flex; gap:14px; flex-wrap:wrap; margin-bottom:10px;}
+  .role p{color:var(--muted); font-size:14px; max-width:560px; margin:0; line-height:1.6;}
+  .apply-btn{display:inline-flex; align-items:center; gap:8px; background:var(--amber); color:#0A0B0E; font-weight:600; font-size:13.5px; padding:11px 22px; border-radius:999px; white-space:nowrap; transition:transform .2s ease;}
+  .apply-btn:hover{transform:translateY(-2px);}
+
+  .section-title{font-size:clamp(24px,3vw,34px); text-transform:lowercase; margin-bottom:34px;}
+  .cta-note{margin-top:50px; padding:34px; border:1px solid var(--line); border-radius:16px; background:#14161d; text-align:center;}
+  .cta-note p{color:var(--muted); font-size:14.5px; margin:0 0 18px;}
+
+  footer{border-top:1px solid var(--line); padding:60px 34px 40px;}
+  .footer-bottom{max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8D93A3;}
+  .footer-bottom a{color:#fff; opacity:.85;}
+  .footer-bottom a:hover{opacity:1; color:var(--amber);}
+
+  .chat-launcher{position:fixed; right:22px; bottom:22px; z-index:260; width:58px; height:58px; border-radius:50%; border:0; cursor:pointer; background:var(--amber); display:flex; align-items:center; justify-content:center; box-shadow:0 14px 34px -10px rgba(255,176,32,.6); transition:transform .2s ease;}
+  .chat-launcher:hover{transform:scale(1.06);}
+  .chat-launcher svg{width:24px; height:24px; stroke:#171226;}
+  .chat-panel{position:fixed; right:22px; bottom:92px; z-index:261; width:min(360px, calc(100vw - 44px)); background:#14161d; border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 30px 70px -20px rgba(0,0,0,.6); display:flex; flex-direction:column; max-height:min(520px, calc(100vh - 140px)); opacity:0; transform:translateY(16px) scale(.98); pointer-events:none; transition:opacity .25s ease, transform .25s ease;}
+  .chat-panel.open{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
+  .chat-head{padding:18px 18px 14px; background:linear-gradient(135deg, rgba(255,176,32,.14), rgba(41,217,197,.1)); border-bottom:1px solid var(--line); position:relative;}
+  .chat-head h4{font-family:var(--display); font-size:16px; margin:0 0 2px; color:#fff;}
+  .chat-head span{font-size:12px; color:#9fe6da; display:flex; align-items:center; gap:6px;}
+  .chat-head span::before{content:""; width:6px; height:6px; border-radius:50%; background:#29D9C5;}
+  .chat-close{position:absolute; top:14px; right:14px; background:none; border:0; color:#8D93A3; cursor:pointer; padding:4px;}
+  .chat-close svg{width:16px; height:16px;}
+  .chat-contact-row{display:flex; gap:8px; padding:12px 14px; border-bottom:1px solid var(--line);}
+  .chat-contact-row a{flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; padding:9px 4px; border-radius:10px; background:rgba(255,255,255,.04); font-size:10.5px; color:#fff; font-weight:600; text-align:center; transition:background .2s ease;}
+  .chat-contact-row a:hover{background:rgba(255,255,255,.1);}
+  .chat-contact-row svg{width:16px; height:16px;}
+  .chat-body{flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px;}
+  .chat-msg{max-width:85%; font-size:13.5px; line-height:1.55; padding:10px 13px; border-radius:14px;}
+  .chat-msg.bot{background:rgba(255,255,255,.06); color:#eceaf2; border-bottom-left-radius:4px; align-self:flex-start;}
+  .chat-msg.user{background:var(--amber); color:#171226; border-bottom-right-radius:4px; align-self:flex-end; font-weight:500;}
+  .chat-chips{display:flex; flex-wrap:wrap; gap:8px; padding:0 16px 12px;}
+  .chat-chips button{background:rgba(255,176,32,.12); border:1px solid rgba(255,176,32,.35); color:var(--amber); font-size:12px; font-weight:600; padding:8px 14px; border-radius:999px; cursor:pointer; transition:background .2s ease;}
+  .chat-chips button:hover{background:rgba(255,176,32,.25);}
+  .chat-input-row{display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--line);}
+  .chat-input-row input{flex:1; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:999px; padding:10px 16px; color:#fff; font-size:13px; font-family:var(--body);}
+  .chat-input-row input::placeholder{color:#7d818f;}
+  .chat-input-row button{width:38px; height:38px; border-radius:50%; background:var(--amber); border:0; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .chat-input-row button svg{width:16px; height:16px; stroke:#171226;}
+
+  @media (max-width:760px){
+    .why-grid{grid-template-columns:1fr;}
+    .chat-panel{right:12px; left:12px; width:auto; bottom:88px;}
+  }
+</style>
+
+<style>
+  .blog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .blog-card{background:#14161d; border:1px solid var(--line); border-radius:16px; padding:26px; display:flex; flex-direction:column; transition:border-color .25s ease, transform .25s ease;}
+  .blog-card:hover{border-color:var(--teal); transform:translateY(-3px);}
+  .blog-card .tag{font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); font-weight:600; margin-bottom:12px;}
+  .blog-card h3{font-size:19px; text-transform:lowercase; margin-bottom:10px; line-height:1.3;}
+  .blog-card p{color:var(--muted); font-size:14px; line-height:1.6; margin:0 0 18px; flex:1;}
+  .blog-card .read-more{font-size:12.5px; font-weight:600; color:var(--amber); display:inline-flex; align-items:center; gap:6px;}
+  .blog-card .meta{font-size:12px; color:#7d818f; margin-top:14px;}
+  article.post{max-width:760px; margin:0 auto;}
+  article.post h2{font-size:clamp(22px,2.8vw,28px); text-transform:lowercase; margin:44px 0 16px;}
+  article.post p{color:#d7d5de; font-size:16px; line-height:1.85; margin:0 0 20px;}
+  article.post ul, article.post ol{color:#d7d5de; font-size:16px; line-height:1.85; padding-left:22px; margin:0 0 20px;}
+  article.post li{margin-bottom:8px;}
+  article.post .byline{color:var(--muted); font-size:13.5px; margin-top:18px;}
+  .post-cta{margin:50px 0; padding:32px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(135deg, rgba(255,176,32,.08), rgba(41,217,197,.06)); text-align:center;}
+  .post-cta p{color:var(--muted); margin:0 0 18px;}
+  .related-posts{border-top:1px solid var(--line); margin-top:60px; padding-top:40px;}
+  .related-posts h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:#8D93A3; margin-bottom:20px;}
+  .related-posts a{display:block; font-size:15.5px; text-transform:lowercase; color:#fff; padding:10px 0; border-bottom:1px solid var(--line);}
+  .related-posts a:hover{color:var(--amber);}
+  @media (max-width:860px){ .blog-grid{grid-template-columns:1fr;} }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WhatsApp API vs Bulk SMS: What Actually Works in 2026",
+  "description": "A practical comparison of WhatsApp Business API and bulk SMS messaging for businesses in India.",
+  "datePublished": "2026-08-30",
+  "dateModified": "2026-08-30",
+  "author": {"@type":"Organization","name":"Bharat Infotechs"},
+  "publisher": {"@type":"Organization","name":"Bharat Infotechs"},
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.bharatinfotechs.com/blog-whatsapp-api-vs-sms.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.bharatinfotechs.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.bharatinfotechs.com/blog.html"},
+    {"@type":"ListItem","position":3,"name":"WhatsApp API vs Bulk SMS: What Actually Works in 2026","item":"https://www.bharatinfotechs.com/blog-whatsapp-api-vs-sms.html"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">bharatinfotechs</a>
+  <div class="header-actions">
+    <a class="wa-glyph" href="https://wa.me/919266895814" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.57L3 20l1.06-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+    </a>
+    <button class="menu-btn" id="menuOpenBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="nav-overlay-close" id="navCloseBtn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#integrations">Integrations</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="careers.html">Careers</a>
+  <a href="careers.html#training">Training</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact">Contact</a>
+  <div class="nav-overlay-contact">
+    <a href="tel:+919266895814">📞 +91 92668 95814</a>
+    <a href="https://wa.me/919266895814" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="mailto:infotechsbharat@gmail.com">✉️ infotechsbharat@gmail.com</a>
+  </div>
+</nav>
+
+<section class="page-hero" style="padding-bottom:40px;">
+  <span class="eyebrow">WhatsApp API</span>
+  <h1>whatsapp api vs bulk sms: what actually works in 2026</h1>
+  <p class="byline" style="max-width:none; color:#8D93A3; font-size:13.5px; margin-top:24px;">Bharat Infotechs Team · Published Aug 2026</p>
+</section>
+
+<main>
+<article class="post">
+<p>Every business messaging conversation in India eventually runs into this question: should we send bulk SMS, or move to the <strong>WhatsApp Business API</strong>? They solve overlapping problems but behave very differently in practice. Here's an honest comparison, not a sales pitch for either.</p>
+
+<h2>cost per message</h2>
+<p>Bulk SMS is cheaper per message, often by a wide margin. If you're sending a one-line OTP or a simple alert, SMS still makes sense — it's cheap, universal, and doesn't need the recipient to have an internet connection.</p>
+
+<h2>read rates tell a different story</h2>
+<p>Promotional SMS in India routinely goes unread — many get filtered by carriers or ignored outright. WhatsApp messages, by contrast, are opened at far higher rates simply because people already treat WhatsApp as a personal inbox they check constantly. For anything beyond a plain notification, that gap in attention matters more than the per-message cost.</p>
+
+<h2>rich content vs plain text</h2>
+<p>SMS is 160 characters of plain text. WhatsApp API messages can include images, PDFs (think catalogues or invoices), buttons, and quick-reply options — which means a customer can browse a catalogue and reply to confirm an order without ever leaving the chat.</p>
+
+<h2>two-way conversation vs one-way blast</h2>
+<p>SMS is fundamentally one-way — replies don't route back into any system unless you build custom infrastructure for it. WhatsApp is a real conversation channel by default: customers can ask questions, and if it's wired into a CRM, those replies land in a shared inbox your team can act on immediately.</p>
+
+<h2>compliance and opt-in rules</h2>
+<p>Both channels require consent, but WhatsApp's policies around business messaging are stricter and more actively enforced — accounts that spam get restricted quickly. This is actually a point in its favor for legitimate businesses: it keeps the channel from degrading into what SMS became.</p>
+
+<h2>so which one should you use?</h2>
+<p>For most businesses in 2026, the honest answer is both, used for different jobs: SMS for OTPs and time-critical alerts where WhatsApp might not have internet access, and WhatsApp API for everything that benefits from being an actual conversation — sales follow-ups, order updates, support, and catalogue sharing. The mistake isn't picking one channel; it's trying to run WhatsApp messaging manually instead of through a proper API integration built for scale.</p>
+
+<div class="post-cta">
+  <p>Want this set up for your own business? See our WhatsApp CRM packages or talk to us directly.</p>
+  <a class="apply-btn" style="display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#0A0B0E;font-weight:600;font-size:13.5px;padding:11px 22px;border-radius:999px;" href="index.html#pricing">See pricing</a>
+  <a class="apply-btn" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--line);color:#fff;font-weight:600;font-size:13.5px;padding:11px 22px;border-radius:999px;margin-left:10px;" href="https://wa.me/919266895814" target="_blank" rel="noopener">WhatsApp us</a>
+</div>
+
+<div class="related-posts">
+  <h4>Related reading</h4>
+  <a href="blog-what-is-whatsapp-api.html">what is whatsapp business api? a plain-english guide</a>
+  <a href="blog-whatsapp-crm-signs.html">5 signs your business needs a whatsapp crm</a>
+  <a href="blog-unify-pos-billing-erp-crm.html">unifying pos, billing, erp and whatsapp crm for multi-branch retail</a>
+</div>
+</article>
+</main>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Bharat Infotechs. All rights reserved.</span>
+    <span><a href="index.html">Home</a> · <a href="blog.html">Blog</a> · <a href="tel:+919266895814">+91 92668 95814</a></span>
+  </div>
+</footer>
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.57L3 20l1.06-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+</button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with Bharat Infotechs">
+  <div class="chat-head">
+    <h4>Bharat Infotechs</h4>
+    <span>Usually replies in a few minutes</span>
+    <button class="chat-close" id="chatCloseBtn" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="chat-contact-row">
+    <a href="tel:+919266895814"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+    <a href="https://wa.me/919266895814" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.57L3 20l1.06-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>WhatsApp</a>
+    <a href="mailto:infotechsbharat@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg>Email</a>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi 👋 Weighing WhatsApp API against SMS for your business? Happy to help you think it through.</div>
+  </div>
+  <div class="chat-chips" id="chatChips">
+    <button data-topic="services">Services</button>
+    <button data-topic="pricing">Pricing</button>
+    <button data-topic="training">Training</button>
+    <button data-topic="contact">Talk to a human</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Type a message…" aria-label="Type a message">
+    <button id="chatSendBtn" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg></button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var navOverlay = document.getElementById('navOverlay');
+  var menuOpenBtn = document.getElementById('menuOpenBtn');
+  var navCloseBtn = document.getElementById('navCloseBtn');
+  function openNav(){ navOverlay.classList.add('open'); navOverlay.setAttribute('aria-hidden','false'); }
+  function closeNav(){ navOverlay.classList.remove('open'); navOverlay.setAttribute('aria-hidden','true'); }
+  menuOpenBtn.addEventListener('click', openNav);
+  navCloseBtn.addEventListener('click', closeNav);
+  navOverlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+
+  var chatLauncher = document.getElementById('chatLauncher');
+  var chatPanel = document.getElementById('chatPanel');
+  var chatCloseBtn = document.getElementById('chatCloseBtn');
+  var chatBody = document.getElementById('chatBody');
+  var chatInput = document.getElementById('chatInput');
+  var chatSendBtn = document.getElementById('chatSendBtn');
+  var chatChips = document.getElementById('chatChips');
+
+  var FAQ = {
+    services: "We build WhatsApp API integrations, CRM &amp; ERP software, Android apps, custom software, billing software, POS systems, and business automation.",
+    pricing: "WhatsApp CRM packages start at ₹38,000 (Starter), ₹65,000 (Business), and ₹95,000 (Pro). See the <a href='/#pricing' style='color:#FFB020;'>pricing section</a> for details.",
+    careers: "We're hiring for development, sales, SEO, and UI/UX roles, plus internships. See our <a href='/careers.html' style='color:#FFB020;'>Careers page</a> or email infotechsbharat@gmail.com.",
+    training: "Yes — we run hands-on training in WhatsApp API development, CRM/ERP systems, and web &amp; app development for students and freshers. Email <a href='mailto:infotechsbharat@gmail.com?subject=Training Inquiry' style='color:#FFB020;'>infotechsbharat@gmail.com</a>, or see the <a href='/careers.html#training' style='color:#FFB020;'>training program</a>.",
+    contact: "Call +91 92668 95814, message us on <a href='https://wa.me/919266895814' target='_blank' style='color:#FFB020;'>WhatsApp</a>, or email infotechsbharat@gmail.com."
+  };
+  function addMsg(text, who){
+    var d = document.createElement('div');
+    d.className = 'chat-msg ' + who; d.innerHTML = text;
+    chatBody.appendChild(d); chatBody.scrollTop = chatBody.scrollHeight;
+  }
+  function botReplyFor(text){
+    var t = text.toLowerCase();
+    if (/price|cost|package|₹|rupee/.test(t)) return FAQ.pricing;
+    if (/train|intern|fresher|learn|student/.test(t)) return FAQ.training;
+    if (/career|job|hire|vacan|resume|cv|role/.test(t)) return FAQ.careers;
+    if (/service|whatsapp api|crm|automation|app dev|software|integrat/.test(t)) return FAQ.services;
+    if (/call|whatsapp|email|contact|human|talk/.test(t)) return FAQ.contact;
+    return "For a precise answer the fastest route is WhatsApp or a call — or ask about <b>services</b>, <b>training</b>, or <b>talk to a human</b>.";
+  }
+  chatLauncher.addEventListener('click', function(){ chatPanel.classList.toggle('open'); });
+  chatCloseBtn.addEventListener('click', function(){ chatPanel.classList.remove('open'); });
+  chatChips.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-topic]'); if (!btn) return;
+    addMsg(btn.textContent, 'user');
+    setTimeout(function(){ addMsg(FAQ[btn.dataset.topic], 'bot'); }, 350);
+  });
+  function sendTyped(){
+    var val = chatInput.value.trim(); if (!val) return;
+    addMsg(val.replace(/</g,'&lt;'), 'user'); chatInput.value = '';
+    setTimeout(function(){ addMsg(botReplyFor(val), 'bot'); }, 400);
+  }
+  chatSendBtn.addEventListener('click', sendTyped);
+  chatInput.addEventListener('keydown', function(e){ if (e.key === 'Enter') sendTyped(); });
+})();
+</script>
+<script src="bi-live-config.js"></script><script src="bi-live-sync.js"></script>
+</body>
+</html>
